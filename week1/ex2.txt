@@ -1,0 +1,38 @@
+ //deleted personal history
+ //Lab history commands below	
+ 1998  whoami
+ 1999  hostname
+ 2000  man whoami
+ 2001  man man
+ 2002  mkdir ~/week1
+ 2003  l
+ 2004  cd week1
+ 2005  gcc
+ 2006  head -n 3
+ 2007  q
+ 2008  l
+ 2009  l  -a
+ 2010  ls
+ 2011  ls | sort -r | tail -n 3
+ 2012  less
+ 2013  ls list.txt
+ 2014  touch ex1.txt
+ 2015  l
+ 2016  cd
+ 2017  l
+ 2018  ls /usr/bin
+ 2019  ls /usr/bin | sort -r | tail -n 3 > week1/ex1.txt 
+ 2020  ls /usr/bin | sort -r | > week1/ex1.txt 
+ 2021  ls /usr/bin > week1/ex1.txt 
+ 2022  cd week1/ 
+ 2023  touch temp.txt
+ 2024  cd
+ 2025  ls /usr/bin |sort -r| > week1/temp.txt 
+ 2026  ls /usr/bin |sort -r| tail -n > week1/temp.txt 
+ 2027  ls /usr/bin |sort -r| tail -n 1707 > week1/temp.txt 
+ 2028  cd week1/
+ 2029  grep gcc temp.txt 
+ 2030  grep gcc temp.txt > ex1.txt 
+ 2031  touch ex2.txt
+ 2032  l
+ 2033  history > ex2.txt
