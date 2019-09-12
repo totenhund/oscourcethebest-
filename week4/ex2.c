@@ -13,7 +13,7 @@ int main(){
   // │                 │            ├─ex2───ex2
   // │                 │            └─ex2
 
-  // 8 procces are created
+  // 8 procces are created, 2^n where n is number of iterations
   // during the cycle child processes are created
   // one fork() which created this process is not copied
   // while other are run by the children
@@ -28,9 +28,18 @@ int main(){
   }
 
   // output after pstree
-  // 16 processes are created
-  //
-  // ├─gnome-terminal-─┬─bash───ex2─┬─ex2─┬─ex2─┬─ex2───ex2
+  // 32 processes are created, 2^n processes are created
+  // where n is number of interation
+
+  // ├─gnome-terminal-─┬─bash───ex2─┬─ex2─┬─ex2─┬─ex2─┬─ex2───ex2
+  // │                 │            │     │     │     └─ex2
+  // │                 │            │     │     ├─ex2───ex2
+  // │                 │            │     │     └─ex2
+  // │                 │            │     ├─ex2─┬─ex2───ex2
+  // │                 │            │     │     └─ex2
+  // │                 │            │     ├─ex2───ex2
+  // │                 │            │     └─ex2
+  // │                 │            ├─ex2─┬─ex2─┬─ex2───ex2
   // │                 │            │     │     └─ex2
   // │                 │            │     ├─ex2───ex2
   // │                 │            │     └─ex2
@@ -38,6 +47,9 @@ int main(){
   // │                 │            │     └─ex2
   // │                 │            ├─ex2───ex2
   // │                 │            └─ex2
+
+
+
   // during the cycle child processes are created
   // one fork() which create this process is not copied
   // while other are run by the children
