@@ -7,8 +7,7 @@ then
       echo "$i" >> numbers.txt
     done
 fi
-ln numbers.txt numbers.txt.lock
+
 LAST=`tail -1 numbers.txt`
 LAST=$((LAST+1))
 echo "$LAST" >> numbers.txt
-rm numbers.txt.lock
