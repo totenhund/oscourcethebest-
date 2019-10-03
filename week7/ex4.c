@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-void * my_realloc(void * ptr, int size){
+void * my_realloc(void * ptr, int size, int orig_size){
 
     void * new_ptr;
 
@@ -14,9 +15,8 @@ void * my_realloc(void * ptr, int size){
         return ptr;
     }else{
         new_ptr = malloc(size);
-        new_ptr = ptr;
-        free(ptr);                  // free old pointer
-        ptr = NULL;                 // avoiding dangle pointers
+        memcpy(new_ptr, ptr, orig_size);
+        free(ptr);
         return new_ptr;
     }
 
@@ -35,7 +35,7 @@ int main() {
 
     // example to check if it works
     printf("\n");
-    arr = my_realloc(arr, sizeof(6 * sizeof(int)));
+    arr = my_realloc(arr, sizeof(6 * sizeof(int)), 5*sizeof(int));
     arr[5] = 9;
     arr[6] = 12;
     for (int j = 0; j < 7; ++j) {
