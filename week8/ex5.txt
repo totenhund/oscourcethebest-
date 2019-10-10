@@ -1,0 +1,4 @@
+What is the difference between a physical and a virtual address?
+
+
+A physical address is a direct, fixed address of some spot in physical memory. A virtual address is an address that must be translated one or more times in order to produce a direct address of physical memory. Some virtual addresses have no corresponding physical address, and referencing them typically causes an implicit supervisor call.
