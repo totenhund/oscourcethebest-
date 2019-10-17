@@ -1,0 +1,1 @@
+To increase hit/miss ratio it is enough to just increase the number of the same numbers in the input, because hit is frame that is in cache already, while miss is when frame is not in cache and we need load this frame into cache.
